@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   font-family: 'Rubik Bubbles' ;
   color: #008000;
- background: #ccccff;
+ /* background: #ccccff; */
  width: 98.8vw;
  height: 100vh ;
  align-items: center ;

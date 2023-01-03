@@ -18,6 +18,18 @@ async function getProduct(req: Request, res: Response) {
   }
 }
 
+async function profile(req: Request, res: Response) {
+  try {
+    const data = await prisma.products.findFirst({
+      where: { id: req.params.id },
+    })
+
+    return res.status(200).json(data)
+  } catch (error) {
+    return res.status(400).json(error)
+  }
+}
+
 async function registerPost(req: Request, res: Response) {
   cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -46,4 +58,4 @@ async function registerPost(req: Request, res: Response) {
   }
 }
 
-export default { registerPost,getProduct }
+export default { registerPost, getProduct, profile }
