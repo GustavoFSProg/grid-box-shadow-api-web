@@ -59,6 +59,7 @@ export const Card = styled.div`
   /* box-shadow:  8px 8px 2px 1px rgba(0, 0, 0, 0.2) ; */
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.3);
   /* box-shadow:  8px 8px 2px 1px black ; */
+  cursor: pointer;
 
   @media screen and (max-width: 800px) {
     display: flex;
